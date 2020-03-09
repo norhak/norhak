@@ -1,0 +1,99 @@
+[
+  {
+    "description": "Test verifying payment methods for a guest",
+    "elements": [
+      {
+        "id": "ScenarioTest verifying payment methods for a guest;Guest is paying with VISA",
+        "keyword": "Scenario",
+        "line": 0,
+        "name": "Guest is paying with VISA",
+        "skipped": false,
+        "sourceLine": "undefined",
+        "status": "failed",
+        "steps": [
+          {
+            "hidden": false,
+            "keyword": ">",
+            "match": {
+              "location": "C:\\StackOverflow\\spec\\payment.as.guest.test.js:1:0"
+            },
+            "name": "Guest is paying with VISA",
+            "result": {
+              "duration": 49391,
+              "error_message": "1) The specified selector does not match any element in the DOM tree.\n\n      | Selector('#username')\n\n   Browser: Safari 13.0.4 / iOS 13.3 (https://automate.browserstack.com/builds/2a92318597d17a6399f33366bb137675b6d95a02/sessions/a4c882524a4df9abc14dc2bdd03bcace8964801e)\n\n      105 |    \t\t.switchToMainWindow()\n      106 |\t\t\t.switchToIframe(this.creditCardCVCIFrame)\n      107 |\t\t\t.typeText(this.creditCardCVC, cvc, {paste: true, replace: true})\n      108 |\t\t\t.switchToMainWindow()\n      109 |\t\t\t.click(this.finishPurchase)\n   --------------------------------------------\n    &rarr; 110 |\t\t\t.typeText(this.creditCardSecureUsername, creditCardCredentials.user)\n   --------------------------------------------\n      111 |\t\t\t.typeText(this.creditCardSecurePassword, creditCardCredentials.password)\n      112 |\t}\n      113 |\n      114 |\tasync payWithGiftCard(giftCardNumber, pinCode) {\n      115 |\t\tawait t\n\n      at <anonymous> (C:\\StackOverflow\\page-objects\\pages\\CheckoutPage.js:110:5)\n      at CheckoutPage.payWithCreditCardSecure (C:\\StackOverflow\\page-objects\\pages\\CheckoutPage.js:97:61)\n\n\n      21 |    await miniCartPage.clickGoToCheckoutButton()\n      22 |\tawait t.click(checkoutPage.shopAsGuestButton)\n      23 |\n      24 |\tawait fillGuestDataForm()\n      25 |\tawait checkoutPage.selectStore()\n   --------------------------------------------\n    &rarr; 26 |\tawait checkoutPage.payWithCreditCardSecure(visaSecure.cardNumber, visaSecure.expiryDate, visaSecure.cvc)\n   --------------------------------------------\n      27 |})\n      28 |\n      29 |async function fillGuestDataForm() {\n      30 |\tawait checkoutPage.fillGuestDataForm(\n      31 |\t\tguestUser.email,\n\n      at <anonymous> (C:\\StackOverflow\\spec\\payment.as.guest.test.js:26:21)",
+              "status": "failed"
+            },
+            "tags": [],
+            "text": [
+              "<a href=\"#\">Guest is paying with VISA</a>"
+            ]
+          }
+        ],
+        "tags": [],
+        "type": "scenario",
+        "uri": ""
+      }
+    ],
+    "id": "Test verifying payment methods for a guest",
+    "keyword": "Feature",
+    "line": 0,
+    "metadata": {
+      "app": {
+        "name": "'Åhléns",
+        "version": "'2.0'"
+      },
+      "browser": {
+        "name": "safari",
+        "version": "13.0.4"
+      },
+      "device": "a4c882524a4df9abc14dc2bdd03bcace8964801e)",
+      "platform": {
+        "name": "unknown",
+        "version": "unknown"
+      }
+    },
+    "name": "Test verifying payment methods for a guest",
+    "runInfo": {
+      "endTime": "2020-03-09T07:23:34.570Z",
+      "passed": 0,
+      "startTime": "2020-03-09T07:22:44.283Z",
+      "testCount": 1,
+      "userAgents": [
+        "Safari 13.0.4 / iOS 13.3 (https://automate.browserstack.com/builds/2a92318597d17a6399f33366bb137675b6d95a02/sessions/a4c882524a4df9abc14dc2bdd03bcace8964801e)"
+      ],
+      "warnings": []
+    },
+    "skipped": false,
+    "tags": [
+      {
+        "line": 0,
+        "name": "@verifying"
+      },
+      {
+        "line": 0,
+        "name": "@payment"
+      },
+      {
+        "line": 0,
+        "name": "@methods"
+      },
+      {
+        "line": 0,
+        "name": "@for"
+      },
+      {
+        "line": 0,
+        "name": "@guest"
+      },
+      {
+        "line": 0,
+        "name": "@paying"
+      },
+      {
+        "line": 0,
+        "name": "@visa"
+      }
+    ],
+    "uri": "C:\\StackOverflow\\spec\\payment.as.guest.test.js:1"
+  }
+]

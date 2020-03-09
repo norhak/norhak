@@ -1,0 +1,46 @@
+{
+	"name": "ahlens-e2e-testcafe-automation",
+	"version": "1.0.0",
+	"description": "Automated end to end test with testcafe",
+	"main": "index.js",
+	"scripts": {
+		"test:chrome": "testcafe chrome ./spec -s takeOnFails=true --reporter cucumber-json:reports/report.json --reporter-app-name='Åhléns ECOM' --reporter-app-version='2.0'",
+		"test:firefox:4:headless": "testcafe -c 4 firefox:headless ./spec -s takeOnFails=true",
+		"test:chromeNoCaching": "testcafe chrome ./spec -s takeOnFails=true --disable-page-caching",
+		"test:browserstackChrome": "testcafe 'browserstack:chrome' ./spec -s takeOnFails=true --reporter cucumber-json:reports/report.json --reporter-app-name='Åhléns ECOM' --reporter-app-version='2.0'",
+		"test:browserstackAndroid": "testcafe \"browserstack:OnePlus 7T\" ./spec --reporter cucumber-json:reports/report.json --reporter-app-name='Åhléns ECOM' --reporter-app-version='2.0'",
+		"test:browserstackAndroids": "testcafe \"browserstack:Samsung Galaxy S10,browserstack:Google Pixel 4 XL,browserstack:OnePlus 7T\" ./spec --reporter cucumber-json:reports/report.json --reporter-app-name='Åhléns ECOM' --reporter-app-version='2.0'",
+		"test:browserstackiPhone": "testcafe \"browserstack:iPhone 11\" ./spec --reporter cucumber-json:reports/report.json --reporter-app-name='Åhléns ECOM' --reporter-app-version='2.0'",
+		"test:chrome:headless": "testcafe chrome:headless ./spec -s takeOnFails=true ",
+		"test:chrome:4:headless": "testcafe -c 4 chrome:headless ./spec -s takeOnFails=true ",
+		"test:chrome:iphonex": "testcafe chrome:emulation:device=iphone X ./spec -s takeOnFails=true",
+		"test:chrome:samsungg10": "testcafe chrome:emulation:device=samsung galaxy 10 ./spec -s takeOnFails=true",
+		"test:firefox": "testcafe firefox ./spec -s takeOnFails=true",
+		"test:edge": "testcafe edge ./spec -s takeOnFails=true",
+		"test:remote": "testcafe remote ./spec --qr-code -s takeOnFails=true --reporter cucumber-json:reports/report.json --reporter-app-name='Åhléns ECOM' --reporter-app-version='2.0'",
+		"test:multiple": "testcafe chrome,firefox,edge ./spec -s takeOnFails=true --reporter cucumber-json:reports/report.json --reporter-app-name='Åhléns ECOM' --reporter-app-version='2.0'",
+		"report": "node report-generator.js"
+	},
+	"keywords": [
+		"Test",
+		"Automation",
+		"TestCafe"
+	],
+	"author": "Great Tester",
+	"license": "ISC",
+	"dependencies": {
+		"browserstack-local": "^1.4.5",
+		"is-mobile": "^2.2.1",
+		"oracledb": "^4.2.0",
+		"prettier": "^1.19.1",
+		"testcafe": "^1.8.1",
+		"testcafe-browser-provider-browserstack": "^1.12.0",
+		"testcafe-reporter-cucumber-json": "^4.0.0",
+		"testcafe-reporter-json": "^2.2.0",
+		"testcafe-reporter-list": "^2.1.0",
+		"testcafe-reporter-nunit": "^0.1.2"
+	},
+	"devDependencies": {
+		"multiple-cucumber-html-reporter": "^1.16.0"
+	}
+}

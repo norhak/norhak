@@ -1,0 +1,6 @@
+{
+	"screenshotPath": "./screenshots",
+	"screenshotPathPattern": "${DATE}_${TIME}/${FIXTURE}.png",
+	"skipJsErrors": true,
+	"disablePageCashing": true
+}
